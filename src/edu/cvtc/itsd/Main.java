@@ -74,13 +74,6 @@ public class Main {
     }
   }
 
-  // Lookup the card information after button press ///////////////////////////
-  public static class Update implements ActionListener {
-    public void actionPerformed(ActionEvent evt) {
-      Main.processCard();
-    }
-  }
-
   // Revert to the main panel after a button press ////////////////////////////
   public static class Handler implements ActionListener {
     public void actionPerformed(ActionEvent evt) {
@@ -271,12 +264,6 @@ public class Main {
     fieldNumber.setBackground(Color.green);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
-
-    JButton updateButton = new JButton("Update");
-    updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
-    panelMain.add(updateButton);
 
     panelMain.add(Box.createVerticalGlue());
 
