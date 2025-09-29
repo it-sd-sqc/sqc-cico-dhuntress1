@@ -47,6 +47,10 @@ public class Main {
     {
       if (fb.getDocument() != null && (stringToAdd.isEmpty() || onlyContainsNumbers(stringToAdd))) {
         super.insertString(fb, offset, stringToAdd, attr);
+
+        if (fb.getDocument().getLength() == MAX_LENGTH) {
+          Main.processCard();
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
@@ -59,6 +63,10 @@ public class Main {
     {
       if (fb.getDocument() != null && (stringToAdd.isEmpty() || onlyContainsNumbers(stringToAdd))) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+
+        if (fb.getDocument().getLength() == MAX_LENGTH) {
+          Main.processCard();
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
