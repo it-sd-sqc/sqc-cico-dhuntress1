@@ -71,3 +71,9 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 * The main panel should appear after step 2
 
 
+Test Steps:
+Run Cico.
+Close the application using the X button.
+
+Expected results:
+The program should close immediatly when the user closes the window.
